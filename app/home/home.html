@@ -1,7 +1,8 @@
+<link rel="stylesheet" href="home/home.css">
 <div class="hero-area">
     <div class="site-width">
         <p class="title">Weather on Earth</p>
-        <img src="../worldmap.svg">
+        <img src="../assets/worldmap.svg">
     </div>
 </div>
 <div class="site-width" ng-controller="HomeCtrl as ctrl">
@@ -24,9 +25,9 @@
             <div class="table-cell">Country:</div>
             <div class="table-cell">{{ctrl.myCoordinates.country}}</div>
             <div class="table-cell">Temperature:</div>
-            <div class="table-cell">{{ctrl.weatherDetails.temp}} &#248K</div>
+            <div class="table-cell">{{ctrl.weatherDetails.temp}} &#176C</div>
             <div class="table-cell">Visibility:</div>
-            <div class="table-cell">{{ctrl.weatherDetails.visibility}} meters</div>
+            <div class="table-cell">{{ctrl.weatherDetails.visibility}} m</div>
             <div class="table-cell">Main:</div>
             <div class="table-cell">{{ctrl.weatherDetails.main}}</div>
         </div>
@@ -34,7 +35,7 @@
             <div class="table-cell">Latitude:</div>
             <div class="table-cell">{{ctrl.myCoordinates.lat}}</div>
             <div class="table-cell">Max temperature:</div>
-            <div class="table-cell">{{ctrl.weatherDetails.temp_max}} &#248K</div>
+            <div class="table-cell">{{ctrl.weatherDetails.temp_max}} &#176C</div>
             <div class="table-cell">Sunrise:</div>
             <div class="table-cell">{{ctrl.weatherDetails.sunrise}}</div>
             <div class="table-cell">Wind speed:</div>
@@ -43,12 +44,12 @@
         <div class="table-row">
             <div class="table-cell">Longitude:</div>
             <div class="table-cell">{{ctrl.myCoordinates.lon}}</div>
-            <div class="table-cell">Min Temperature:</div>
-            <div class="table-cell">{{ctrl.weatherDetails.temp_min}} &#248K</div>
+            <div class="table-cell">Min temperature:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.temp_min}} &#176C</div>
             <div class="table-cell">Sunset:</div>
             <div class="table-cell">{{ctrl.weatherDetails.sunset}}</div>
             <div class="table-cell">Wind degree:</div>
-            <div class="table-cell">{{ctrl.weatherDetails.degSpeed}} &#248</div>
+            <div class="table-cell">{{ctrl.weatherDetails.degSpeed}} &#176</div>
         </div>
     </div>
 </div>

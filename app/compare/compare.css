@@ -1,0 +1,14 @@
+.background-container {
+    background-image: url('../assets/clouds.png');
+    background-size: cover;
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.input-container {
+    width: 50%;
+    display: inline-block
+}

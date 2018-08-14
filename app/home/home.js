@@ -33,15 +33,16 @@ angular.module('myApp.home', ['ngRoute'])
       }
     }
     ctrl.weatherDetails = {};
+    const valCelsius = 273.15;
     $http.get('https://api.openweathermap.org/data/2.5/weather', config)
       .then(function(resp){
         ctrl.weatherDetails.humidity = resp.data.main.humidity;
         ctrl.weatherDetails.pressure = resp.data.main.pressure;
-        ctrl.weatherDetails.temp = resp.data.main.temp;
-        ctrl.weatherDetails.temp_max = resp.data.main.temp_max;
-        ctrl.weatherDetails.temp_min = resp.data.main.temp_min;
-        ctrl.weatherDetails.sunrise = resp.data.sys.sunrise;
-        ctrl.weatherDetails.sunset = resp.data.sys.sunset;
+        ctrl.weatherDetails.temp = resp.data.main.temp - valCelsius;
+        ctrl.weatherDetails.temp_max = resp.data.main.temp_max - valCelsius;
+        ctrl.weatherDetails.temp_min = resp.data.main.temp_min - valCelsius;
+        ctrl.weatherDetails.sunrise = ctrl.timeConverter(resp.data.sys.sunrise);
+        ctrl.weatherDetails.sunset = ctrl.timeConverter(resp.data.sys.sunset);
         ctrl.weatherDetails.visibility = resp.data.visibility;
         ctrl.weatherDetails.description = resp.data.weather[0].description;
         ctrl.weatherDetails.main = resp.data.weather[0].main;
@@ -49,5 +50,23 @@ angular.module('myApp.home', ['ngRoute'])
         ctrl.weatherDetails.degSpeed = resp.data.wind.deg;
         ctrl.enableTable = true;
       })
-  } 
+  }
+
+  ctrl.timeConverter = function(timestamp){
+    var a = new Date(timestamp * 1000);
+    var hour = a.getHours();
+    var min = a.getMinutes();
+    var sec = a.getSeconds();
+    if (hour < 10) {
+      hour = '0' + hour;
+    }
+    if (min < 10) {
+      min = '0' + min;
+    }
+    if (sec < 10) {
+      sec = '0' + sec;
+    }
+    var time = hour + ':' + min + ':' + sec ;
+    return time;
+  }
 });
