@@ -1,0 +1,54 @@
+<div class="hero-area">
+    <div class="site-width">
+        <p class="title">Weather on Earth</p>
+        <img src="../worldmap.svg">
+    </div>
+</div>
+<div class="site-width" ng-controller="HomeCtrl as ctrl">
+    <div class="text-description">
+        <span>You can find out how the weather is in your current location. If you want this, please press </span>
+        <span ng-click="ctrl.findCurrentLocation()" class="location-button">here.</span>
+    </div>
+    <div ng-if="ctrl.enableTable" class="table">
+        <div class="table-row">
+            <div class="table-cell">City:</div>
+            <div class="table-cell">{{ctrl.myCoordinates.city}}</div>
+            <div class="table-cell">Humidity:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.humidity}} %</div>
+            <div class="table-cell">Pressure:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.pressure}} hPa</div>
+            <div class="table-cell">Description:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.description}}</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Country:</div>
+            <div class="table-cell">{{ctrl.myCoordinates.country}}</div>
+            <div class="table-cell">Temperature:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.temp}} &#248K</div>
+            <div class="table-cell">Visibility:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.visibility}} meters</div>
+            <div class="table-cell">Main:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.main}}</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Latitude:</div>
+            <div class="table-cell">{{ctrl.myCoordinates.lat}}</div>
+            <div class="table-cell">Max temperature:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.temp_max}} &#248K</div>
+            <div class="table-cell">Sunrise:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.sunrise}}</div>
+            <div class="table-cell">Wind speed:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.windSpeed}} m/s</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Longitude:</div>
+            <div class="table-cell">{{ctrl.myCoordinates.lon}}</div>
+            <div class="table-cell">Min Temperature:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.temp_min}} &#248K</div>
+            <div class="table-cell">Sunset:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.sunset}}</div>
+            <div class="table-cell">Wind degree:</div>
+            <div class="table-cell">{{ctrl.weatherDetails.degSpeed}} &#248</div>
+        </div>
+    </div>
+</div>
