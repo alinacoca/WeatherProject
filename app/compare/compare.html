@@ -1,19 +1,25 @@
 <link rel="stylesheet" href="compare/compare.css">
 <div class="background-container">
-    <div class="site-width" ng-controller="CompareCtrl">
+    <div class="site-width" ng-controller="CompareCtrl as ctrl">
         <div class="choose-text">
             You can choose what cities you want to compare. Please, enter the city names in the folowing boxes:
         </div>
         <div class="city-container">
             <div class="input-container">
                 <input class="input-field" type="text" placeholder="Choose the first city..." ng-model="firstCity">
-                <img src="../assets/search.svg" class="search-icon" ng-click="showInfo(firstCity)">
+                <img src="../assets/search.svg" class="search-icon" ng-click="ctrl.showInfo(firstCity, 1)">
             </div>
-        </div>
-        <div class="city-container">
+            <div ng-if="ctrl.enableDetails1">
+                intra in div
+                <weather-details weatherDetails="ctrl.weatherDetails1" enableError="ctrl.enableError1" errMessage="ctrl.errMessage"></details>
+            </div>
+        </div><div class="city-container">
             <div class="input-container">
                 <input class="input-field" type="text" placeholder="Choose the second city..." ng-model="secondCity">
-                <img src="../assets/search.svg" class="search-icon" ng-click="showInfo(secondCity)">
+                <img src="../assets/search.svg" class="search-icon" ng-click="ctrl.showInfo(secondCity, 2)">
+            </div>
+            <div ng-if="ctrl.enableDetails2">
+                <weather-details weatherDetails="ctrl.weatherDetails2" enableError="ctrl.enableError2" errMessage="ctrl.errMessage"></details>
             </div>
         </div>
     </div>

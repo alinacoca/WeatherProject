@@ -1,0 +1,36 @@
+.weatherDetails {
+    padding-top: 50px;
+    padding-left: 10px;
+    float: left;
+}
+
+.list-row {
+    width: 100%;
+    position: relative;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+.list-label {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 500;
+    color: #3da5d1;
+}
+
+.list-detail {
+    padding-left: 200px;
+    width: 100%;
+    display: inline-block;
+    text-transform:capitalize;
+}
+
+.err-message {
+    float: left;
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 20px;
+    color: #eb4b57;
+}

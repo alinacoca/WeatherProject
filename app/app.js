@@ -4,7 +4,8 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.home',
-  'myApp.compare'
+  'myApp.compare',
+  'weatherDetails'
 ])
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

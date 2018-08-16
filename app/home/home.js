@@ -47,7 +47,7 @@ angular.module('myApp.home', ['ngRoute'])
         ctrl.weatherDetails.description = resp.data.weather[0].description;
         ctrl.weatherDetails.main = resp.data.weather[0].main;
         ctrl.weatherDetails.windSpeed = resp.data.wind.speed;
-        ctrl.weatherDetails.degSpeed = resp.data.wind.deg;
+        ctrl.weatherDetails.windDeg = resp.data.wind.deg;
         ctrl.enableTable = true;
       })
   }
