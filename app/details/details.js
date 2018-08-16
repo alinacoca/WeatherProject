@@ -10,7 +10,8 @@ angular.module('weatherDetails', [])
         errMessage: '=',
         enableDetails: '='
     },
-    controller: function DetailsCtrl($scope) {
-        console.log($scope.weatherDetails);
-    }
-});
+    controller: 'DetailsCtrl'
+})
+.controller('DetailsCtrl', function($scope) {
+    console.log($scope);
+ });

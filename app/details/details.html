@@ -1,68 +1,70 @@
 <link rel="stylesheet" href="details/details.css">
-<div ng-if="enableDetails" class="weatherDetails" ng-controller="DetailsCtrl">
-    <div class="list-row">
-        <div class="list-label">Country:</div>
-        <div class="list-detail">{{weatherDetails.country}}</div>
+<div ng-controller="DetailsCtrl">
+    <div ng-if="enableDetails" class="weatherDetails">
+        <div class="list-row">
+            <div class="list-label">Country:</div>
+            <div class="list-detail">{{weatherDetails.country}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Latitude:</div>
+            <div class="list-detail">{{weatherDetails.lat}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Longitude:</div>
+            <div class="list-detail">{{weatherDetails.lon}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Humidity:</div>
+            <div class="list-detail">{{weatherDetails.humidity}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Pressure:</div>
+            <div class="list-detail">{{weatherDetails.pressure}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Temperature:</div>
+            <div class="list-detail">{{weatherDetails.temp}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Max temperature:</div>
+            <div class="list-detail">{{weatherDetails.temp_max}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Min temperature:</div>
+            <div class="list-detail">{{weatherDetails.temp_min}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Pressure:</div>
+            <div class="list-detail">{{weatherDetails.pressure}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Visibility:</div>
+            <div class="list-detail">{{weatherDetails.visibility}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Sunrise:</div>
+            <div class="list-detail">{{weatherDetails.sunrise}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Sunset:</div>
+            <div class="list-detail">{{weatherDetails.sunset}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Description:</div>
+            <div class="list-detail">{{weatherDetails.description}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Main:</div>
+            <div class="list-detail">{{weatherDetails.main}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Wind speed:</div>
+            <div class="list-detail">{{weatherDetails.windSpeed}}</div>
+        </div>
+        <div class="list-row">
+            <div class="list-label">Wind degree:</div>
+            <div class="list-detail">{{weatherDetails.windDeg}}</div>
+        </div>
     </div>
-    <div class="list-row">
-        <div class="list-label">Latitude:</div>
-        <div class="list-detail">{{weatherDetails.lat}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Longitude:</div>
-        <div class="list-detail">{{weatherDetails.lon}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Humidity:</div>
-        <div class="list-detail">{{weatherDetails.humidity}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Pressure:</div>
-        <div class="list-detail">{{weatherDetails.pressure}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Temperature:</div>
-        <div class="list-detail">{{weatherDetails.temp}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Max temperature:</div>
-        <div class="list-detail">{{weatherDetails.temp_max}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Min temperature:</div>
-        <div class="list-detail">{{weatherDetails.temp_min}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Pressure:</div>
-        <div class="list-detail">{{weatherDetails.pressure}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Visibility:</div>
-        <div class="list-detail">{{weatherDetails.visibility}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Sunrise:</div>
-        <div class="list-detail">{{weatherDetails.sunrise}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Sunset:</div>
-        <div class="list-detail">{{weatherDetails.sunset}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Description:</div>
-        <div class="list-detail">{{weatherDetails.description}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Main:</div>
-        <div class="list-detail">{{weatherDetails.main}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Wind speed:</div>
-        <div class="list-detail">{{weatherDetails.windSpeed}}</div>
-    </div>
-    <div class="list-row">
-        <div class="list-label">Wind degree:</div>
-        <div class="list-detail">{{weatherDetails.windDeg}}</div>
-    </div>
+    <div class="err-message" ng-if="enableError">{{errMessage}}</div>
 </div>
-<div class="err-message" ng-if="enableError">{{errMessage}}</div>

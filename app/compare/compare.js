@@ -19,7 +19,6 @@ angular.module('myApp.compare', ['ngRoute'])
 
   ctrl.errMessage = '';
   ctrl.showInfo = function(city, number) {
-    console.log(city);
     var config = {
       params: {
         q: city,
@@ -50,7 +49,6 @@ angular.module('myApp.compare', ['ngRoute'])
         ctrl.weatherDetails1 = JSON.parse(JSON.stringify(ctrl.weatherDetails));
         ctrl.enableDetails1 = true;
       }
-      console.log(ctrl.enableDetails1);
       if(number == 2) {
         ctrl.enableError2 = false;
         ctrl.weatherDetails2 = JSON.parse(JSON.stringify(ctrl.weatherDetails));
@@ -86,6 +84,4 @@ angular.module('myApp.compare', ['ngRoute'])
     var time = hour + ':' + min + ':' + sec ;
     return time;
   }
-
-  console.log(JSON.stringify(ctrl));
 });
