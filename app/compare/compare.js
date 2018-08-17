@@ -64,7 +64,7 @@ angular.module('myApp.compare', ['ngRoute',
         ctrl.enableDetails2 = false;
         ctrl.enableError2 = true;
       }
-      ctrl.errMessage = 'This country does not exist.';
+      ctrl.errMessage = 'This city does not exist.';
     });
   }
 
