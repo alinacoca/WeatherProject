@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="header/header.css">
+<header ng-controller="HeaderCtrl as ctrl">
+    <div class="site-width">
+        <div class="header-container">
+            <a href="#!/home"><img src="assets/weather-logo.png" class="logo"></a>
+            <div class="menu-container">
+                <a href="#!/home" class="menu-button"  ng-class="ctrl.getClass('/home')">Home</a>
+                <a href="#!/compare" class="menu-button"  ng-class="ctrl.getClass('/compare')">Compare</a>
+            </div>
+        </div>
+    </div>
+</header>

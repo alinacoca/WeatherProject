@@ -1,6 +1,7 @@
 'use strict';
 
-angular.module('myApp.compare', ['ngRoute'])
+angular.module('myApp.compare', ['ngRoute',
+'weatherDetails'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/compare', {
@@ -18,7 +19,7 @@ angular.module('myApp.compare', ['ngRoute'])
   ctrl.enableError2 = false;
 
   ctrl.errMessage = '';
-  ctrl.showInfo = function(city, number) {
+  ctrl.showDetails = function(city, number) {
     var config = {
       params: {
         q: city,

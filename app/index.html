@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Weather on Earth</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
@@ -16,30 +16,16 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 <body>
-  
-  <header ng-controller="AppCtrl as app">
-    <div class="site-width">
-      <div class="header-container">
-        <img src="assets/weather-logo.png" class="logo">
-        <div class="menu-container">
-          <a href="#!/home" class="menu-button"  ng-class="app.getClass('/home')">Home</a>
-          <a href="#!/compare" class="menu-button"  ng-class="app.getClass('/compare')">Compare</a>
-        </div>
-      </div>
-    </div>
-  </header>
-  
+  <app-header></app-header>
   <div ng-view></div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-animate/angular-animate.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="app.js"></script>
+  <script src="header/header.js"></script>
   <script src="home/home.js"></script>
   <script src="compare/compare.js"></script>
   <script src="details/details.js"></script>

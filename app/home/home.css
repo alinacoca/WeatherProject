@@ -1,48 +1,59 @@
-/* css for home page */
-
 .title {
-    text-align: center;
-    font-size: 48px;
-    padding-top: 20px; 
-  }
-  
-  .hero-area {
-    background-color: rgba(192, 189, 199, 0.1);
-  }
-  
-  .text-description {
-    font-size: 20px;
-    margin-top: 20px;
-    text-align: center;
-  }
-  
-  .location-button {
-    color: #3da5d1;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-  .table {
-    display: table;
-    margin-top: 20px;
-    border-top: 1px solid rgba(170, 170, 170, 1);
-    border-left: 1px solid rgba(170, 170, 170, 1);
-  }
-  
+  text-align: center;
+  font-size: 48px;
+  padding-top: 20px; 
+}
+
+.world-image {
+  width: 100%;
+  height: auto;
+}
+
+.hero-area {
+  background-color: rgba(192, 189, 199, 0.1);
+}
+
+.text-description {
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.location-button {
+  color: #3da5d1;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.table {
+  display: table;
+  margin-top: 20px;
+  border-top: 1px solid rgba(170, 170, 170, 1);
+  border-left: 1px solid rgba(170, 170, 170, 1);
+}
+
+.table-cell {
+  display: inline-block;
+  width: 50%;
+  border-bottom: 1px solid rgba(170, 170, 170, 1);
+  border-right: 1px solid rgba(170, 170, 170, 1);
+  padding-left: 5px;
+  line-height: 2;
+}
+
+.table-cell:nth-child(odd) {
+  background-color: rgba(170, 170, 170, 0.7);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
   .table-row {
     display: table-row;
   }
-  
+
   .table-cell {
     display: table-cell;
     width: 12.5%;
-    border-bottom: 1px solid rgba(170, 170, 170, 1);
-    border-right: 1px solid rgba(170, 170, 170, 1);
-    padding-left: 5px;
-    line-height: 1.8;
-  }
-  
-  .table-cell:nth-child(odd) {
-    background-color: rgba(170, 170, 170, 0.7);
-    font-weight: 600;
-  }
+  } 
+}

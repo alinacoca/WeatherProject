@@ -7,10 +7,9 @@
 .list-row {
     width: 100%;
     position: relative;
-    line-height: 1.8;
+    line-height: 2;
     font-size: 18px;
 }
-
 .list-label {
     display: inline-block;
     position: absolute;
