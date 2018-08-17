@@ -9,17 +9,13 @@
                 <input class="input-field" type="text" placeholder="Choose the first city..." ng-model="firstCity">
                 <img src="../assets/search.svg" class="search-icon" ng-click="ctrl.showInfo(firstCity, 1)">
             </div>
-            <div ng-if="ctrl.enableDetails1">
-                <weather-details weatherDetails="ctrl.weatherDetails1" enableError="ctrl.enableError1" errMessage="ctrl.errMessage"></details>
-            </div>
+            <weather-details weather-details="ctrl.weatherDetails1" enable-error="ctrl.enableError1" err-message="ctrl.errMessage" enable-details="ctrl.enableDetails1"></weather-details>
         </div><div class="city-container">
             <div class="input-container">
                 <input class="input-field" type="text" placeholder="Choose the second city..." ng-model="secondCity">
                 <img src="../assets/search.svg" class="search-icon" ng-click="ctrl.showInfo(secondCity, 2)">
             </div>
-            <div ng-if="ctrl.enableDetails2">
-                <weather-details weatherDetails="ctrl.weatherDetails2" enableError="ctrl.enableError2" errMessage="ctrl.errMessage"></details>
-            </div>
+            <weather-details weather-details="ctrl.weatherDetails2" enable-error="ctrl.enableError2" err-message="ctrl.errMessage" enable-details="ctrl.enableDetails2"></weather-details>
         </div>
     </div>
 </div>

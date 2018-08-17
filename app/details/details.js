@@ -12,6 +12,5 @@ angular.module('weatherDetails', [])
     },
     controller: 'DetailsCtrl'
 })
-.controller('DetailsCtrl', function($scope) {
-    console.log($scope);
+.controller('DetailsCtrl', function() {
  });
