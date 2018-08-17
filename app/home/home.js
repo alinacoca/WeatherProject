@@ -13,6 +13,7 @@ angular.module('myApp.home', ['ngRoute'])
   var ctrl = this;
   ctrl.myCoordinates = {};
   ctrl.enableTable = false;
+  
   ctrl.findCurrentLocation = function() {
     $http.get('http://ip-api.com/json')
       .then(function(coordinates) {

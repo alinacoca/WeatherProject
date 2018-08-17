@@ -11,14 +11,13 @@ angular.module('myApp.compare', ['ngRoute',
 }])
 
 .controller('CompareCtrl', function($http) {
-
   var ctrl = this;
   ctrl.enableDetails1 = false;
   ctrl.enableDetails2 = false;
   ctrl.enableError1 = false;
   ctrl.enableError2 = false;
-
   ctrl.errMessage = '';
+
   ctrl.showDetails = function(city, number) {
     var config = {
       params: {
