@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'appHeader',
+  'myApp.login',
   'myApp.home',
   'myApp.compare'
 ])
