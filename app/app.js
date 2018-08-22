@@ -5,6 +5,7 @@ angular.module('myApp', [
   'ngRoute',
   'appHeader',
   'myApp.login',
+  'myApp.register',
   'myApp.home',
   'myApp.compare'
 ])

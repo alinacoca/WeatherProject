@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('myApp.REGISTER', ['ngRoute'])
+angular.module('myApp.register', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/register', {

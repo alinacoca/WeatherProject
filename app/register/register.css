@@ -1,0 +1,9 @@
+body {
+    position: relative;
+    background-color: #eb4b4b;
+}
+
+.register-button {
+    background-color: #eb4b4b;
+    border: solid 1px #eb4b4b;
+}
