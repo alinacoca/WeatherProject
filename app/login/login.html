@@ -4,8 +4,9 @@
     <img class="user-icon" src="../assets/user.jpg">
     <div class="title">Welcome to LogIn</div>
     <form class="form-container" ng-submit="ctrl.loginUser()">
-        <input class="input-field" type="text" placeholder="Username" ng-model="ctrl.user.username">
-        <input class="input-field" type="password" placeholder="Password" ng-model="ctrl.user.password">
+        <input class="input-field" type="text" placeholder="Username" ng-model="ctrl.user.username" required>
+        <input class="input-field" type="password" placeholder="Password" ng-model="ctrl.user.password" required>
+        <div id="negative-feedback">Incorrect username or password!</div>
         <button type="submit" class="submit-button login-button">LOGIN</button>
     </form>
 </div>

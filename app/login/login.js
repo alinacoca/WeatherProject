@@ -17,5 +17,8 @@ angular.module('myApp.login', ['ngRoute', 'myApp.authServices'])
       AuthService.setUserAuthenticated(true);
       $location.path('/home');
     }
+    else {
+      document.getElementById('negative-feedback').style.display = "block";
+    }
   }
 }])
