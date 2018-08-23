@@ -44,7 +44,7 @@ a {
 }
 
 .logout-button:hover {
-    text-decoration: underline;
+    color: #3da5d1;
 }
 
 button:focus {

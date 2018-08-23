@@ -1,5 +1,5 @@
 .user-container {
-    width: 500px;
+    width: 70%;
     background-color: white;
     position: absolute;
     top: 50%;
@@ -42,4 +42,10 @@
 .redirect-button {
     padding-bottom: 30px;
     display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .user-container {
+        width: 540px;
+    }
 }
