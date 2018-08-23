@@ -7,12 +7,26 @@ angular.module('myApp', [
   'myApp.login',
   'myApp.register',
   'myApp.home',
-  'myApp.compare'
+  'myApp.compare',
+  'myApp.authServices'
 ])
-.config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/home'});
+.config(['$locationProvider', '$routeProvider',function($locationProvider, $routeProvider) {
+  $locationProvider.hashPrefix('!');
+  $routeProvider.otherwise({redirectTo: '/login'});
+}])
+
+.run(['$rootScope', '$route', 'AuthService', function($rootScope, $route, AuthService){
+  $rootScope.$on("$locationChangeStart", function(event, next, current) {
+      for(var i in $route.routes) {
+        if(next.indexOf(i) != -1) {
+            if($route.routes[i].requireLogin && !AuthService.getUserAuthenticated()) {
+              alert("You need to be authenticated to see this page!");
+              event.preventDefault();
+            }
+        }
+      }
+  });
 }])
 .controller('AppCtrl', function() {
 });
