@@ -10,4 +10,15 @@ angular.module('myApp.register', ['ngRoute'])
   });
 }])
 
-.controller('RegisterCtrl', function($http) {})
+.controller('RegisterCtrl', ['$window', function($window) {
+  var ctrl = this;
+  ctrl.registerUser = function() {
+    var users = JSON.parse(localStorage.getItem('users'));
+    if(users === null) {
+      users = [];
+    }
+    users.push(ctrl.user);
+    localStorage.setItem("users", JSON.stringify(users));
+    console.log(localStorage);
+  }
+}])
