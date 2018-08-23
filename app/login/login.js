@@ -13,12 +13,14 @@ angular.module('myApp.login', ['ngRoute', 'myApp.authServices'])
 .controller('LoginCtrl', ['AuthService', '$location', function(AuthService, $location) {
   var ctrl = this;
   ctrl.loginUser = function() {
-    if(ctrl.user.username === 'user' && ctrl.user.password === 'password'){
-      AuthService.setUserAuthenticated(true);
+    console.log(localStorage);
+    AuthService.setUserAuthenticated(ctrl.user);
+    if(AuthService.userIsAuthenticated){
+      document.getElementById('negative-feedback-login').style.display = "none";
       $location.path('/home');
     }
     else {
-      document.getElementById('negative-feedback').style.display = "block";
+      document.getElementById('negative-feedback-login').style.display = "block";
     }
   }
 }])

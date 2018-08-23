@@ -6,7 +6,8 @@
     <form class="form-container" ng-submit="ctrl.loginUser()">
         <input class="input-field" type="text" placeholder="Username" ng-model="ctrl.user.username" required>
         <input class="input-field" type="password" placeholder="Password" ng-model="ctrl.user.password" required>
-        <div id="negative-feedback">Incorrect username or password!</div>
+        <div id="negative-feedback-login">Incorrect username or password!</div>
         <button type="submit" class="submit-button login-button">LOGIN</button>
     </form>
+    <span>You don't have an account?<a href="#!/register" class="redirect-button">Register now</div></span>
 </div>

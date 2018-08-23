@@ -25,11 +25,7 @@ header {
   
 a {
     color: black !important;
-}
-  
-a:hover {
     text-decoration: none !important;
-    color: #3da5d1 !important;
 }
   
 .active {
@@ -41,4 +37,16 @@ a:hover {
     padding-left: 48px;
     font-weight: 500;
 }
-  
+
+.logout-button {
+    background-color: white;
+    border: none;
+}
+
+.logout-button:hover {
+    text-decoration: underline;
+}
+
+button:focus {
+    outline:0;
+}

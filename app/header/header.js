@@ -12,7 +12,7 @@ angular.module('appHeader', ['myApp.authServices'])
         return ($location.path() === path) ? 'active' : '';
     }
     ctrl.logoutUser = function() {
-        AuthService.setUserAuthenticated(false);
+        AuthService.userIsAuthenticated = false;
         $location.path('/login');
     }
  }]);

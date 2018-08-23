@@ -8,6 +8,8 @@
         <input class="input-field" type="text" placeholder="Username" ng-model="ctrl.user.username" required>
         <input class="input-field" type="password" placeholder="Password" ng-model="ctrl.user.password" required>
         <input class="input-field" type="password" placeholder="Confirm Password" ng-model="ctrl.user.confirmPass" required>
+        <div id="negative-feedback-register">{{ctrl.messageError}}</div>
         <button type="submit" class="submit-button register-button">REGISTER</button>
     </form>
+    <span>Do you already have an account?<a href="#!/login" class="redirect-button">Log in now</div></span>
 </div>
