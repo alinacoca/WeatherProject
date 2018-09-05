@@ -6,12 +6,15 @@ angular.module('myApp.authServices', [])
     this.userIsAuthenticated = false;
 
     this.setUserAuthenticated = function(_user){
-        var users = JSON.parse(localStorage.getItem('users'));
-        users.forEach(user => {
-            if (user.username === _user.username && user.password === _user.password){
-                this.userIsAuthenticated = true;
-            }
-        });
+        let users = localStorage.getItem('users');
+        if (users) {
+            users = JSON.parse(users);
+            users.forEach(user => {
+                if (user.username === _user.username && user.password === _user.password){
+                    this.userIsAuthenticated = true;
+                }
+            });
+        }
     };
 
     this.getUserAuthenticated = function(){

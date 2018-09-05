@@ -13,7 +13,6 @@ angular.module('myApp.login', ['ngRoute', 'myApp.authServices'])
 .controller('LoginCtrl', ['AuthService', '$location', function(AuthService, $location) {
   var ctrl = this;
   ctrl.loginUser = function() {
-    console.log(localStorage);
     AuthService.setUserAuthenticated(ctrl.user);
     if(AuthService.userIsAuthenticated){
       document.getElementById('negative-feedback-login').style.display = "none";
