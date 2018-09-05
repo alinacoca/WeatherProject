@@ -30,8 +30,8 @@ body {
 .search-icon {
     width: 24px;
     position: absolute;
-    right: 12px;
-    bottom: 12px;
+    right: 15px;
+    bottom: 8px;
     cursor: pointer;
 }
 
