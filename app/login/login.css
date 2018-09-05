@@ -1,0 +1,15 @@
+body {
+    position: relative;
+    background-color: #4ba1eb
+}
+
+.login-button {
+    background-color: #4ba1eb;
+    border: solid 1px #4ba1eb;
+}
+
+#negative-feedback-login {
+    display: none;
+    color: #eb4b57;
+    font-size: 18px;
+}

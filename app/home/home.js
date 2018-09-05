@@ -1,19 +1,21 @@
 'use strict';
 
-angular.module('myApp.home', ['ngRoute'])
+angular.module('myApp.home', ['ngRoute', 'myApp.authServices'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/home', {
     templateUrl: 'home/home.html',
-    controller: 'HomeCtrl'
+    controller: 'HomeCtrl',
+    requireLogin: true
   });
 }])
 
 .controller('HomeCtrl', function($http) {
   var ctrl = this;
   ctrl.myCoordinates = {};
-  ctrl.enableTable = false;
+  ctrl.enableTable = false;  
   
+
   ctrl.findCurrentLocation = function() {
     $http.get('http://ip-api.com/json')
       .then(function(coordinates) {
@@ -70,4 +72,4 @@ angular.module('myApp.home', ['ngRoute'])
     var time = hour + ':' + min + ':' + sec ;
     return time;
   }
-});
+})

@@ -1,0 +1,15 @@
+body {
+    position: relative;
+    background-color: #eb4b4b;
+}
+
+.register-button {
+    background-color: #eb4b4b;
+    border: solid 1px #eb4b4b;
+}
+
+#negative-feedback-register {
+    display: none;
+    color: #eb4b57;
+    font-size: 18px;
+}
